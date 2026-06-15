@@ -1,0 +1,13 @@
+.dotnet/
+.vs/
+**/bin/
+**/obj/
+dist/
+*.user
+*.suo
+*.pdb
+Thumbs.db
+Desktop.ini
+
+RhinoKeyboardWedge.Setup/Payload/*
+!RhinoKeyboardWedge.Setup/Payload/.gitkeep
