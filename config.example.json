@@ -1,0 +1,14 @@
+{
+  "PortName": "COM6",
+  "BaudRate": 9600,
+  "DataBits": 8,
+  "Parity": "None",
+  "StopBits": "1",
+  "FlowControl": "None",
+  "QuantityRegex": "QTY:\\s*(\\d+)\\s*pcs",
+  "PostSendAction": "Enter",
+  "DuplicateWindowMs": 1000,
+  "StartMinimized": false,
+  "MinimizeToTray": true,
+  "StartWithWindows": false
+}
