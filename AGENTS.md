@@ -8,7 +8,7 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
 - No hacer push, crear tags remotos ni publicar releases sin aprobación explícita del usuario.
 - No modificar ni reemplazar tags o releases ya publicados.
 - Antes de cerrar cambios de código, ejecutar compilación y validar los artefactos generados.
-- No versionar builds, logs, zips temporales, caches, SDKs locales ni evidencia local.
+- No versionar builds, logs, zips temporales, cachés, SDKs locales ni evidencia local.
 
 ## Idioma y documentación
 
@@ -22,10 +22,10 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
 - Nombre visible de la aplicación: `LINHER Keyboard Wedge`.
 - Ejecutable principal: `LinherKeyboardWedge.exe`.
 - Launcher estable: `LinherKeyboardWedgeLauncher.exe`.
-- El icono oficial vive en:
+- El ícono oficial vive en:
   - `assets/branding/linher-keyboard-wedge.png`
   - `assets/branding/linher-keyboard-wedge.ico`
-- El icono debe conservar:
+- El ícono debe conservar:
   - isotipo de LINHER con `2 flamas`,
   - referencia clara al rhino,
   - referencia clara a teclado/input,
@@ -35,8 +35,11 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
 
 - Configuración y logs por usuario:
   - `%LOCALAPPDATA%\LINHER\KeyboardWedge`
-- Carpeta heredada a migrar:
+- Carpetas heredadas a migrar:
   - `%LOCALAPPDATA%\RhinoKeyboardWedge`
+  - `%LOCALAPPDATA%\LinherKeyboardWedge`
+  - `%LOCALAPPDATA%\LinherKeyboardWedger`
+  - `%LOCALAPPDATA%\LINHER\KeyboardWedger`
 - Instalación estable del launcher:
   - `%LOCALAPPDATA%\Programs\LINHER Keyboard Wedge`
 - Raíz runtime del launcher:
@@ -68,9 +71,9 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
   - `MINOR`: mejoras backward-compatible de UI, branding, instalador, launcher o funcionalidad.
   - `MAJOR`: cambios incompatibles en distribución, configuración o comportamiento operativo esperado.
 - Antes de release, alinear la misma versión en:
-  - `RhinoKeyboardWedge.App.csproj`
+  - `LinherKeyboardWedge.App.csproj`
   - `LinherKeyboardWedge.Launcher.csproj`
-  - `RhinoKeyboardWedge.Setup.csproj`
+  - `LinherKeyboardWedge.Setup.csproj`
   - `installer/KeyboardWedge.iss`
   - metadata de release embebida por `installer/build-setup.ps1`
 
@@ -122,6 +125,6 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
 
 ## Restricciones de implementación
 
-- No romper la migración automática desde `%LOCALAPPDATA%\RhinoKeyboardWedge`.
+- No romper la migración automática desde las carpetas heredadas.
 - `Iniciar con Windows` debe apuntar al launcher estable cuando exista.
 - No cambiar nombres de assets de release sin actualizar launcher, README, build scripts y este archivo.

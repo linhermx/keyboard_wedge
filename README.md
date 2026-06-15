@@ -99,10 +99,13 @@ Archivos principales:
 %LOCALAPPDATA%\LINHER\KeyboardWedge\logs\YYYY-MM-DD.log
 ```
 
-Si existía una instalación anterior, la configuración previa se migra automáticamente desde:
+Si existía una instalación anterior, la configuración previa puede migrarse automáticamente desde:
 
 ```text
 %LOCALAPPDATA%\RhinoKeyboardWedge
+%LOCALAPPDATA%\LinherKeyboardWedge
+%LOCALAPPDATA%\LinherKeyboardWedger
+%LOCALAPPDATA%\LINHER\KeyboardWedger
 ```
 
 ## Actualizaciones
@@ -136,7 +139,7 @@ Si la aplicación no recibe datos o no escribe en la ventana destino:
 
 ```powershell
 $dotnet = ".\.dotnet\dotnet.exe"
-& $dotnet build .\RhinoKeyboardWedge.sln -c Release
+& $dotnet build .\LinherKeyboardWedge.sln -c Release
 ```
 
 ### Generación de artefactos
@@ -149,6 +152,7 @@ Salida esperada:
 
 ```text
 dist\LinherKeyboardWedge\
+dist\LinherKeyboardWedgeLauncher\
 dist\linher_keyboard_wedge_windows.zip
 dist\linher_keyboard_wedge_launcher_portable.zip
 dist\linher_keyboard_wedge_setup.exe
@@ -157,10 +161,10 @@ dist\linher_keyboard_wedge_setup.exe
 ## Estructura
 
 ```text
-RhinoKeyboardWedge.sln
-RhinoKeyboardWedge.App/
+LinherKeyboardWedge.sln
+LinherKeyboardWedge.App/
 LinherKeyboardWedge.Launcher/
-RhinoKeyboardWedge.Setup/
+LinherKeyboardWedge.Setup/
 assets/
 installer/
 config.example.json
