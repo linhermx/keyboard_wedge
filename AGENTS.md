@@ -65,7 +65,7 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
 ## Versionado
 
 - Este proyecto debe usar `SEMVER`.
-- Versión preparada actualmente: `1.0.0`.
+- Versión preparada actualmente: `1.0.1`.
 - Regla:
   - `PATCH`: corrección de bugs sin cambios funcionales relevantes.
   - `MINOR`: mejoras backward-compatible de UI, branding, instalador, launcher o funcionalidad.
@@ -94,7 +94,7 @@ Reglas obligatorias para cualquier agente que trabaje en este repositorio.
   - `feat: add launcher-based update flow`
   - `fix: preserve legacy config migration`
   - `docs: update README for installer distribution`
-  - `chore: prepare v1.0.0 release`
+  - `chore: prepare v1.0.1 release`
   - `test: add launcher packaging checks`
 - Separar, cuando aplique:
   - inicialización del repositorio,

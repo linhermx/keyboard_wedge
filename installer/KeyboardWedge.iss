@@ -1,5 +1,5 @@
 #define MyAppName "LINHER Keyboard Wedge"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppExeName "LinherKeyboardWedgeLauncher.exe"
 
 [Setup]
