@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>RhinoKeyboardWedge.Setup</RootNamespace>
+    <RootNamespace>LinherKeyboardWedge.Setup</RootNamespace>
     <AssemblyName>LinherKeyboardWedgeSetup</AssemblyName>
     <Product>LINHER Keyboard Wedge Setup</Product>
     <Title>LINHER Keyboard Wedge Setup</Title>

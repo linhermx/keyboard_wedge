@@ -13,13 +13,13 @@ function Invoke-Dotnet {
 
     & $dotnet @Arguments
     if ($LASTEXITCODE -ne 0) {
-        throw "dotnet finalizó con código ${LASTEXITCODE}: $($Arguments -join ' ')"
+        throw "dotnet finalizo con codigo ${LASTEXITCODE}: $($Arguments -join ' ')"
     }
 }
 
-$appProject = Join-Path $root "RhinoKeyboardWedge.App\RhinoKeyboardWedge.App.csproj"
+$appProject = Join-Path $root "LinherKeyboardWedge.App\LinherKeyboardWedge.App.csproj"
 $launcherProject = Join-Path $root "LinherKeyboardWedge.Launcher\LinherKeyboardWedge.Launcher.csproj"
-$setupProject = Join-Path $root "RhinoKeyboardWedge.Setup\RhinoKeyboardWedge.Setup.csproj"
+$setupProject = Join-Path $root "LinherKeyboardWedge.Setup\LinherKeyboardWedge.Setup.csproj"
 
 $appPublishDir = Join-Path $root "dist\LinherKeyboardWedge"
 $appZipPath = Join-Path $root "dist\linher_keyboard_wedge_windows.zip"
@@ -27,9 +27,14 @@ $launcherPublishDir = Join-Path $root "dist\LinherKeyboardWedgeLauncher"
 $launcherPortableZipPath = Join-Path $root "dist\linher_keyboard_wedge_launcher_portable.zip"
 $launcherBuildDir = Join-Path $root "dist\launcher-build"
 $setupPublishDir = Join-Path $root "dist\setup-build"
-$setupPayloadDir = Join-Path $root "RhinoKeyboardWedge.Setup\Payload"
+$setupPayloadDir = Join-Path $root "LinherKeyboardWedge.Setup\Payload"
 $setupPath = Join-Path $root "dist\linher_keyboard_wedge_setup.exe"
 $legacySetupPath = Join-Path $root "dist\LinherKeyboardWedgeSetup.exe"
+$legacyWedgerAppPublishDir = Join-Path $root "dist\LinherKeyboardWedger"
+$legacyWedgerLauncherPublishDir = Join-Path $root "dist\LinherKeyboardWedgerLauncher"
+$legacyWedgerAppZipPath = Join-Path $root "dist\linher_keyboard_wedger_windows.zip"
+$legacyWedgerLauncherPortableZipPath = Join-Path $root "dist\linher_keyboard_wedger_launcher_portable.zip"
+$legacyWedgerSetupPath = Join-Path $root "dist\linher_keyboard_wedger_setup.exe"
 
 function New-ZipFromDirectory {
     param(
@@ -70,6 +75,11 @@ Remove-Item -LiteralPath $appZipPath -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $launcherPortableZipPath -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $setupPath -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $legacySetupPath -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath $legacyWedgerAppPublishDir -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath $legacyWedgerLauncherPublishDir -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath $legacyWedgerAppZipPath -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath $legacyWedgerLauncherPortableZipPath -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath $legacyWedgerSetupPath -Force -ErrorAction SilentlyContinue
 
 New-Item -ItemType Directory -Force -Path $appPublishDir, $launcherPublishDir, $launcherBuildDir, $setupPublishDir, $setupPayloadDir | Out-Null
 
@@ -144,7 +154,7 @@ Get-ChildItem -Path $setupPayloadDir -Force -ErrorAction SilentlyContinue |
 Remove-Item -LiteralPath $launcherBuildDir -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $setupPublishDir -Recurse -Force -ErrorAction SilentlyContinue
 
-Write-Host "Aplicación: $appPublishDir"
-Write-Host "ZIP actualización: $appZipPath"
+Write-Host "Aplicacion: $appPublishDir"
+Write-Host "ZIP actualizacion: $appZipPath"
 Write-Host "Launcher portable: $launcherPortableZipPath"
 Write-Host "Instalador: $setupPath"

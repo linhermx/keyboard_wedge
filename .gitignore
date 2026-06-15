@@ -9,5 +9,5 @@ dist/
 Thumbs.db
 Desktop.ini
 
-RhinoKeyboardWedge.Setup/Payload/*
-!RhinoKeyboardWedge.Setup/Payload/.gitkeep
+LinherKeyboardWedge.Setup/Payload/*
+!LinherKeyboardWedge.Setup/Payload/.gitkeep

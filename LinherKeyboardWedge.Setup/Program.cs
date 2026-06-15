@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Reflection;
 
-namespace RhinoKeyboardWedge.Setup;
+namespace LinherKeyboardWedge.Setup;
 
 internal static class Program
 {
