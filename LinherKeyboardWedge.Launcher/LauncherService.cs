@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.IO.Compression;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace LinherKeyboardWedge.Launcher;
 
@@ -25,7 +26,7 @@ internal sealed class LauncherService
             Timeout = TimeSpan.FromSeconds(8)
         };
         _httpClient.DefaultRequestHeaders.UserAgent.Add(
-            new ProductInfoHeaderValue("LINHER-Keyboard-Wedge-Launcher", "1.0.0"));
+            new ProductInfoHeaderValue("LINHER-Keyboard-Wedge-Launcher", "1.0.1"));
     }
 
     public async Task<InstalledApp> EnsureLatestInstalledAsync(IProgress<string> progress, CancellationToken cancellationToken)
@@ -316,8 +317,10 @@ internal sealed class LauncherService
 
     private sealed class BundledReleaseMetadata
     {
+        [JsonPropertyName("tag")]
         public string Tag { get; set; } = string.Empty;
 
+        [JsonPropertyName("asset_name")]
         public string AssetName { get; set; } = string.Empty;
     }
 
