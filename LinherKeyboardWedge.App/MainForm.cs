@@ -1,10 +1,10 @@
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using RhinoKeyboardWedge.App.Configuration;
-using RhinoKeyboardWedge.App.Logging;
-using RhinoKeyboardWedge.App.Services;
+using LinherKeyboardWedge.App.Configuration;
+using LinherKeyboardWedge.App.Logging;
+using LinherKeyboardWedge.App.Services;
 
-namespace RhinoKeyboardWedge.App;
+namespace LinherKeyboardWedge.App;
 
 internal sealed class MainForm : Form
 {

@@ -1,9 +1,9 @@
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Text;
-using RhinoKeyboardWedge.App.Configuration;
+using LinherKeyboardWedge.App.Configuration;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal interface IKeyboardSender
 {

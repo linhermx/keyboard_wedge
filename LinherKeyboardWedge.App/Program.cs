@@ -1,7 +1,7 @@
-using RhinoKeyboardWedge.App.Configuration;
-using RhinoKeyboardWedge.App.Logging;
+using LinherKeyboardWedge.App.Configuration;
+using LinherKeyboardWedge.App.Logging;
 
-namespace RhinoKeyboardWedge.App;
+namespace LinherKeyboardWedge.App;
 
 internal static class Program
 {

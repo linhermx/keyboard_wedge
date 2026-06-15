@@ -1,10 +1,8 @@
-namespace RhinoKeyboardWedge.App.Configuration;
+namespace LinherKeyboardWedge.App.Configuration;
 
 internal static class AppPaths
 {
     private static readonly string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
-    public static string LegacyDataDirectory { get; } = Path.Combine(LocalAppData, "RhinoKeyboardWedge");
     public static string DataDirectory { get; } = ResolveDataDirectory();
     public static string LogDirectory { get; } = Path.Combine(DataDirectory, "logs");
     public static string ConfigPath { get; } = Path.Combine(DataDirectory, "config.json");
@@ -13,13 +11,24 @@ internal static class AppPaths
     {
         var currentDirectory = Path.Combine(LocalAppData, "LINHER", "KeyboardWedge");
 
-        if (!Directory.Exists(currentDirectory) && Directory.Exists(LegacyDataDirectory))
+        foreach (var legacyDirectory in GetLegacyDirectories())
         {
-            CopyDirectory(LegacyDataDirectory, currentDirectory);
+            if (!Directory.Exists(currentDirectory) && Directory.Exists(legacyDirectory))
+            {
+                CopyDirectory(legacyDirectory, currentDirectory);
+            }
         }
 
         Directory.CreateDirectory(currentDirectory);
         return currentDirectory;
+    }
+
+    private static IEnumerable<string> GetLegacyDirectories()
+    {
+        yield return Path.Combine(LocalAppData, "RhinoKeyboardWedge");
+        yield return Path.Combine(LocalAppData, "LinherKeyboardWedge");
+        yield return Path.Combine(LocalAppData, "LinherKeyboardWedger");
+        yield return Path.Combine(LocalAppData, "LINHER", "KeyboardWedger");
     }
 
     private static void CopyDirectory(string sourceDirectory, string destinationDirectory)

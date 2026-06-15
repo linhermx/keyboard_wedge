@@ -1,4 +1,4 @@
-namespace RhinoKeyboardWedge.App.Logging;
+namespace LinherKeyboardWedge.App.Logging;
 
 internal sealed class DailyFileLogger : IDisposable
 {

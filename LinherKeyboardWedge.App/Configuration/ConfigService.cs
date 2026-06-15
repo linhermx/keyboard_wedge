@@ -1,7 +1,7 @@
 using System.Text.Json;
-using RhinoKeyboardWedge.App.Logging;
+using LinherKeyboardWedge.App.Logging;
 
-namespace RhinoKeyboardWedge.App.Configuration;
+namespace LinherKeyboardWedge.App.Configuration;
 
 internal sealed class ConfigService
 {

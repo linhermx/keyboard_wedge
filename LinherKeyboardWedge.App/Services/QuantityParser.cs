@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal sealed class QuantityParser
 {

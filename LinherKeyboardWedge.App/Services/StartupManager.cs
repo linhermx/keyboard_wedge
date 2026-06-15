@@ -1,6 +1,6 @@
 using Microsoft.Win32;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal sealed class StartupManager
 {

@@ -1,7 +1,7 @@
-using RhinoKeyboardWedge.App.Configuration;
-using RhinoKeyboardWedge.App.Logging;
+using LinherKeyboardWedge.App.Configuration;
+using LinherKeyboardWedge.App.Logging;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal sealed class WedgeProcessor
 {

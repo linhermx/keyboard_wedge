@@ -1,4 +1,4 @@
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal sealed class ProcessedReadingEventArgs : EventArgs
 {

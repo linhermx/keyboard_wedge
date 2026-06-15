@@ -1,4 +1,4 @@
-namespace RhinoKeyboardWedge.App.Configuration;
+namespace LinherKeyboardWedge.App.Configuration;
 
 internal sealed class AppSettings
 {

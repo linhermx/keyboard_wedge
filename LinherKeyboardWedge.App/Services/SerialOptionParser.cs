@@ -1,6 +1,6 @@
 using System.IO.Ports;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal static class SerialOptionParser
 {

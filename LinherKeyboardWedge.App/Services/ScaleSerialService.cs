@@ -1,8 +1,8 @@
 using System.IO.Ports;
 using System.Text;
 using RJCP.IO.Ports;
-using RhinoKeyboardWedge.App.Configuration;
-using RhinoKeyboardWedge.App.Logging;
+using LinherKeyboardWedge.App.Configuration;
+using LinherKeyboardWedge.App.Logging;
 using MsHandshake = System.IO.Ports.Handshake;
 using MsParity = System.IO.Ports.Parity;
 using MsSerialPort = System.IO.Ports.SerialPort;
@@ -11,7 +11,7 @@ using RjcpHandshake = RJCP.IO.Ports.Handshake;
 using RjcpParity = RJCP.IO.Ports.Parity;
 using RjcpStopBits = RJCP.IO.Ports.StopBits;
 
-namespace RhinoKeyboardWedge.App.Services;
+namespace LinherKeyboardWedge.App.Services;
 
 internal sealed class ScaleSerialService : IDisposable
 {
